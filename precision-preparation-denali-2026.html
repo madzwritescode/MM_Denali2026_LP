@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precision Preparation: Denali 2026 | Mountain Madness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --mm-black: #000000;
+      --mm-white: #FFFFFF;
+      --mm-red: #C32026;
+      --mm-gray: #6B6F72;
+      --mm-light-gray: #F4F4F4;
+    }
+
+    body {
+      font-family: 'Montserrat', 'Open Sans', 'Segoe UI', sans-serif;
+      color: var(--mm-black);
+      background-color: var(--mm-white);
+    }
+
+    .hero-overlay {
+      background: linear-gradient(125deg, rgba(0, 0, 0, 0.82) 20%, rgba(0, 0, 0, 0.45) 80%);
+    }
+
+    .hero-logo {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      width: 140px;
+      filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.15));
+    }
+
+    .section-heading {
+      letter-spacing: 0.08em;
+      color: var(--mm-red);
+    }
+
+    .phase-card {
+      background: var(--mm-white);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .value-card {
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      background-color: var(--mm-white);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      padding: 1rem;
+    }
+
+    .comparison-table th {
+      background-color: rgba(195, 32, 38, 0.08);
+    }
+
+    .gradient-border {
+      border: 1px solid transparent;
+      border-radius: 1rem;
+      background-image: linear-gradient(120deg, rgba(195, 32, 38, 0.18), rgba(195, 32, 38, 0.05));
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2.4rem;
+      font-weight: 600;
+      border-radius: 0.15rem;
+      border: 1px solid transparent;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--mm-red);
+      color: var(--mm-white);
+      border-color: var(--mm-red);
+    }
+
+    .btn-primary:hover {
+      background-color: #a3191f;
+      border-color: #a3191f;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--mm-black);
+      border-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--mm-black);
+      color: var(--mm-white);
+      border-color: var(--mm-black);
+    }
+
+    .btn-secondary-light {
+      background-color: transparent;
+      color: var(--mm-white);
+      border-color: rgba(255, 255, 255, 0.65);
+    }
+
+    .btn-secondary-light:hover {
+      background-color: var(--mm-white);
+      color: var(--mm-black);
+      border-color: var(--mm-white);
+    }
+
+    .hero-portrait {
+      aspect-ratio: 4 / 3;
+    }
+
+    @supports not (aspect-ratio: 1) {
+      .hero-portrait {
+        height: 420px;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-[var(--mm-carbon)]">
+  <main>
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center bg-white">
+      <img src="https://via.placeholder.com/160x160?text=MM+Logo" alt="Mountain Madness logo" class="hero-logo">
+      <div class="relative z-10 w-full max-w-6xl mx-auto px-6 py-20 flex flex-col lg:flex-row lg:items-center gap-16">
+        <div class="max-w-2xl">
+          <p class="uppercase tracking-[0.4em] text-sm text-[var(--mm-red)] mb-6">Precision Preparation · Denali 2026</p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-[var(--mm-black)]">One Team. One Plan. Total Certainty.</h1>
+          <p class="text-lg text-black/70 mb-10">The world’s first fully integrated 6-month precision preparation and guided expedition. Train with Alpine Athletics. Summit with Mountain Madness. and a team Lisa would trust with her own life.</p>
+          <div class="flex flex-col sm:flex-row gap-4 mb-6">
+            <a href="#masterclass" class="btn btn-primary flex-col gap-1 text-center shadow-lg shadow-[var(--mm-red)]/25">
+              <span>Join the <span class="font-black tracking-[0.08em]">FREE</span> Denali 2026 Masterclass</span>
+              <span class="text-xs font-normal tracking-normal text-white/80 normal-case">by Lisa Thompson</span>
+            </a>
+          </div>
+          <p class="text-xs uppercase tracking-[0.35em] text-black/50">Limited to 10 Climbers · 1:2 Guide Ratio · Physician Oversite</p>
+        </div>
+        <div class="flex-1 max-w-xl w-full space-y-6">
+          <div class="bg-white border border-black/10 rounded-3xl p-8 shadow-xl">
+            <h2 class="text-sm uppercase tracking-[0.4em] text-black/50 mb-3">Precision Team</h2>
+            <p class="text-black text-lg mb-4">Co-developed by Mountain Madness and Alpine Athletics, Precision Preparation is what happens when world-class guiding meets elite high-altitude training science.</p>
+            <ul class="space-y-4 text-black/70 text-sm">
+              <li class="flex justify-between"><span>Duration</span><span>6 Months</span></li>
+              <li class="flex justify-between"><span>Expedition</span><span>22-Day Denali West Buttress</span></li>
+              <li class="flex justify-between"><span>Group Size</span><span>10 Climbers · 1:2 Guide Ratio</span></li>
+              <li class="flex justify-between"><span>Lead</span><span>Lisa Thompson · Owner</span></li>
+            </ul>
+          </div>
+          <div class="bg-white border border-black/10 rounded-3xl p-6 shadow-md">
+            <p class="text-sm text-black/60 uppercase tracking-[0.3em] mb-2">Upcoming Live Session</p>
+            <p class="text-xl font-semibold">Precision Prep Masterclass</p>
+            <p class="text-black/70 text-sm">Reserve your seat to understand exactly what it takes to be “Denali certain.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="bg-white py-20 px-6 border-y border-black/5" id="problem">
+      <div class="max-w-5xl mx-auto text-center">
+        <p class="section-heading uppercase text-sm text-[var(--mm-red)] tracking-[0.4em] mb-4">The Problem</p>
+        <h2 class="text-4xl font-semibold mb-6">Why Denali Demands a Different Kind of Prep</h2>
+        <p class="text-lg text-black/70 leading-relaxed">Denali is where intermediate climbers step into truly serious alpine terrain. The margin for error is smaller. The logistics are heavier. The cold is real. Most people underestimate either the fitness or the logistics. Precision Preparation exists so you don’t have to guess on either.</p>
+        <div class="mt-10 flex justify-center">
+          <a href="#masterclass" class="btn btn-primary text-sm shadow-md shadow-[var(--mm-red)]/20">
+            <span>Join the <span class="font-black tracking-[0.08em]">FREE</span> Denali 2026 Masterclass</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="bg-white py-24 px-6" id="team">
+      <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-6">
+          <p class="section-heading uppercase text-sm text-[var(--mm-red)] tracking-[0.4em]">Meet the Precision Team</p>
+          <h2 class="text-4xl font-semibold">Lisa Thompson &amp; the Expert Collective</h2>
+          <p class="text-lg text-black/70">“I would only bring in experts I’d personally use.” — Lisa Thompson, Owner &amp; Lead Guide</p>
+          <p class="text-black/70">Lisa is a high-altitude mountaineer, Denali &amp; Everest summiteer, K2 and Seven Summits finisher, and the new owner of Mountain Madness. This Precision Preparation programme is the first offering built entirely under her leadership – combining 40+ years of MM expedition legacy with the structured training system she wished she’d had on her own Denali journey.</p>
+          <div class="flex flex-wrap gap-3 text-sm text-black/80">
+            <span class="px-4 py-2 border border-black/15 rounded-full">1:2 Guide Ratio</span>
+            <span class="px-4 py-2 border border-black/15 rounded-full">Expedition Physician Oversight</span>
+            <span class="px-4 py-2 border border-black/15 rounded-full">Recal Breath Index™ Integration</span>
+            <span class="px-4 py-2 border border-black/15 rounded-full">80%+ Denali Success Track</span>
+          </div>
+        </div>
+        <div class="hero-portrait rounded-[2rem] overflow-hidden border border-black/5 shadow-2xl w-full">
+          <img src="https://mountain-madness.imgix.net/general-images/BEDA62B1-EEDD-4A11-94C3-B05E028E6BB1_1_105_c.f1758642402.jpeg?auto=compress%2Cformat&amp;crop=focalpoint&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;h=864&amp;q=80&amp;w=2200&amp;s=54e5d57c56abd4560876d33d1ad4f5d7" alt="Lisa Thompson" class="w-full h-full object-cover object-center">
+        </div>
+      </div>
+
+      <div class="max-w-6xl mx-auto mt-16 space-y-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Performance Engineering -->
+          <article class="rounded-2xl border border-[#f5c9bf] bg-gradient-to-br from-white via-[#fff5ef] to-[#ffe7dd] p-6 shadow-md">
+            <p class="text-xs uppercase tracking-[0.35em] text-[var(--mm-red)] mb-2">Performance Engineering</p>
+            <h3 class="text-2xl font-semibold mb-2">High-altitude training built around real Denali load.</h3>
+            <p class="text-sm text-black/70 mb-4">Periodised strength &amp; endurance mapped to carrying days, camp moves, and summit push. TrainingPeaks + CTL targets keep legs, lungs, and load-ready capacity on track.</p>
+            <div class="pt-4 border-t border-black/5 space-y-3">
+              <div class="flex items-center gap-3">
+                <img src="https://via.placeholder.com/72x72?text=Lisa" alt="Lisa Thompson" class="w-12 h-12 rounded-full object-cover">
+                <div>
+                  <p class="font-semibold text-sm">Lisa Thompson</p>
+                  <p class="text-xs text-black/60">Summit coach &amp; programme architect · K2, Everest, Seven Summits</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="https://via.placeholder.com/72x72?text=AA" alt="Alpine Athletics Coach" class="w-12 h-12 rounded-full object-cover">
+                <div>
+                  <p class="font-semibold text-sm">Alpine Athletics Coaches</p>
+                  <p class="text-xs text-black/60">NASM-certified high-altitude performance specialists</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Altitude Nutrition Protocol -->
+          <article class="rounded-2xl border border-[#f5c9bf] bg-gradient-to-br from-white via-[#fff5ef] to-[#ffe7dd] p-6 shadow-md">
+            <p class="text-xs uppercase tracking-[0.35em] text-[var(--mm-red)] mb-2">Altitude Nutrition Protocol</p>
+            <h3 class="text-2xl font-semibold mb-2">Fueling tuned for Denali’s cold, load, and duration.</h3>
+            <p class="text-sm text-black/70 mb-4">Six months with a high-altitude dietitian to dial daily fueling, gut resilience, hydration, and on-mountain menus—no guesswork, just proven protocols.</p>
+            <div class="pt-4 border-t border-black/5 flex items-center gap-3">
+              <img src="https://via.placeholder.com/72x72?text=AL" alt="Alisa Leib" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-sm">Alisa Leib</p>
+                <p class="text-xs text-black/60">High-altitude expedition dietitian · Cold-weather, multi-day haul specialist</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Summit Safety & Medical Command -->
+          <article class="rounded-2xl border border-[#f5c9bf] bg-gradient-to-br from-white via-[#fff5ef] to-[#ffe7dd] p-6 shadow-md">
+            <p class="text-xs uppercase tracking-[0.35em] text-[var(--mm-red)] mb-2">Summit Safety &amp; Medical Command</p>
+            <h3 class="text-2xl font-semibold mb-2">Proactive medical oversight, not last-minute triage.</h3>
+            <p class="text-sm text-black/70 mb-4">Baseline labs, med history reviews, altitude meds, and go/no-go guardrails keep you aligned with Denali risk thresholds.</p>
+            <div class="pt-4 border-t border-black/5 space-y-3">
+              <div class="flex items-center gap-3">
+                <img src="https://via.placeholder.com/72x72?text=TM" alt="Dr. Tracy Metcalf" class="w-12 h-12 rounded-full object-cover">
+                <div>
+                  <p class="font-semibold text-sm">Dr. Tracy Metcalf</p>
+                  <p class="text-xs text-black/60">High-altitude expedition physician · 6-month oversight</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="https://via.placeholder.com/72x72?text=MM" alt="Mountain Madness Guides" class="w-12 h-12 rounded-full object-cover">
+                <div>
+                  <p class="font-semibold text-sm">Mountain Madness Guide Team</p>
+                  <p class="text-xs text-black/60">1:2 guide ratio on the mountain</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Breathwork & Nervous System -->
+          <article class="rounded-2xl border border-[#f5c9bf] bg-gradient-to-br from-white via-[#fff5ef] to-[#ffe7dd] p-6 shadow-md">
+            <p class="text-xs uppercase tracking-[0.35em] text-[var(--mm-red)] mb-2">Breathwork &amp; Nervous System</p>
+            <h3 class="text-2xl font-semibold mb-2">Recal™ Breath Index &amp; Hypoxic Calm.</h3>
+            <p class="text-sm text-black/70 mb-4">The Mountain Madness Score™ taps your Recal Breath Index to train CO₂ tolerance, recovery capacity, and decision clarity before summit day.</p>
+            <div class="pt-4 border-t border-black/5 flex items-center gap-3">
+              <img src="https://via.placeholder.com/72x72?text=AL" alt="Anthony Lorubbio" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <p class="font-semibold text-sm">Anthony Lorubbio</p>
+                <p class="text-xs text-black/60">Recal Founder &amp; High-Altitude Breathwork Specialist</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Gear Logistics & 1:1 Summit Strategy -->
+          <article class="rounded-2xl border border-[#f5c9bf] bg-gradient-to-br from-white via-[#fff5ef] to-[#ffe7dd] p-6 shadow-md">
+            <p class="text-xs uppercase tracking-[0.35em] text-[var(--mm-red)] mb-2">Gear Logistics &amp; 1:1 Summit Strategy</p>
+            <h3 class="text-2xl font-semibold mb-2">Boots, layers, pacing—coached by someone who’s been there.</h3>
+            <p class="text-sm text-black/70 mb-4">Item-by-item gear review, camp and rope-team systems, and 1:1 summit sessions so questions never languish in a forum thread.</p>
+            <div class="pt-4 border-t border-black/5 space-y-3">
+              <div class="flex items-center gap-3">
+                <img src="https://via.placeholder.com/72x72?text=LT" alt="Lisa Thompson" class="w-12 h-12 rounded-full object-cover">
+                <div>
+                  <p class="font-semibold text-sm">Lisa Thompson</p>
+                  <p class="text-xs text-black/60">Personal summit mentor for the programme</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <img src="https://via.placeholder.com/72x72?text=GC" alt="Gear Concierge" class="w-12 h-12 rounded-full object-cover">
+                <div>
+                  <p class="font-semibold text-sm">Alpine Athletics / MM Gear Concierge</p>
+                  <p class="text-xs text-black/60">Dedicated support for equipment &amp; logistics</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CTA Card -->
+          <article class="rounded-2xl p-6 bg-[var(--mm-red)] text-white shadow-lg flex flex-col justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.35em] mb-2 text-white/70">Ready to be Denali certain?</p>
+              <h3 class="text-2xl font-semibold mb-3">Apply for Precision Preparation</h3>
+              <p class="text-sm text-white/90">Secure one of the 10 seats for the 2026 cohort and get the full team behind your summit bid.</p>
+            </div>
+            <a href="#apply" class="mt-6 inline-flex items-center justify-center px-6 py-3 bg-white/10 border border-white/30 rounded-lg font-semibold text-white hover:bg-white hover:text-[var(--mm-red)] transition">Apply to Precision Prep</a>
+          </article>
+        </div>
+
+        <div class="text-center max-w-4xl mx-auto">
+          <p class="text-base text-black/70">This Mountain Madness + Alpine Athletics collective is why our athletes post a <strong class="font-bold text-black">80%+ success rate on Denali</strong>—every specialist aligns around one outcome: you stepping onto the summit prepared, confident, and safe.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diagnostic -->
+    <section class="bg-[var(--mm-light-gray)] py-24 px-6" id="diagnostic">
+      <div class="max-w-5xl mx-auto space-y-10 text-black">
+        <div class="text-center space-y-4">
+          <p class="section-heading uppercase text-sm text-[var(--mm-red)] tracking-[0.4em]">The Diagnostic</p>
+          <h2 class="text-4xl font-semibold">Mountain Madness Score™</h2>
+          <p class="text-lg text-black/80">Your personalized benchmark for high-altitude expedition readiness—built from data we trust on Denali, Everest, and beyond.</p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-lg space-y-6">
+          <div class="space-y-4">
+            <p class="uppercase text-xs tracking-[0.4em] text-[var(--mm-red)]">Powered by 3 Performance Engines</p>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+              <article class="flex flex-col gap-2">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--mm-red)] text-white font-semibold">01</span>
+                <div>
+                  <p class="text-sm font-semibold text-black mb-1">Breathing Efficiency</p>
+                  <p class="text-sm text-black/70">Recal Breath Index™ shows how your respiratory system performs under simulated altitude stress.</p>
+                </div>
+              </article>
+              <article class="flex flex-col gap-2">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--mm-red)] text-white font-semibold">02</span>
+                <div>
+                  <p class="text-sm font-semibold text-black mb-1">Strength &amp; Endurance Load</p>
+                  <p class="text-sm text-black/70">Fitness Index benchmarks carry strength, endurance, and workload capacity against Denali demands.</p>
+                </div>
+              </article>
+              <article class="flex flex-col gap-2">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--mm-red)] text-white font-semibold">03</span>
+                <div>
+                  <p class="text-sm font-semibold text-black mb-1">Resilience Under Stress</p>
+                  <p class="text-sm text-black/70">Mindset Index measures calm-under-pressure, risk processing, and recovery between pushes.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="border border-black/10 rounded-2xl p-6">
+            <h3 class="text-2xl font-semibold mb-2">What you get instantly</h3>
+            <ul class="text-sm text-black/80 space-y-2">
+              <li>• Score tier + visual progress bar</li>
+              <li>• Strengths &amp; risk factors</li>
+              <li>• Specific next steps to improve</li>
+              <li>• Recommendation engine for training paths</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-black/60">Why climbers trust it</p>
+            <div class="grid sm:grid-cols-3 gap-3 text-sm">
+              <span class="px-4 py-2 rounded-full border border-black/10 bg-[var(--mm-light-gray)] text-center">✔ Free tool</span>
+              <span class="px-4 py-2 rounded-full border border-black/10 bg-[var(--mm-light-gray)] text-center">✔ Fast — 10 minutes</span>
+              <span class="px-4 py-2 rounded-full border border-black/10 bg-[var(--mm-light-gray)] text-center">✔ No credit card</span>
+              <span class="px-4 py-2 rounded-full border border-black/10 bg-[var(--mm-light-gray)] text-center">✔ Designed by Denali + Everest summiters</span>
+              <span class="px-4 py-2 rounded-full border border-black/10 bg-[var(--mm-light-gray)] text-center">✔ Your data stays private</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center gap-4 sm:justify-between">
+            <a href="#readiness" class="btn btn-primary">Get My Mountain Madness Score</a>
+            <p class="text-sm text-black/70 text-center sm:text-left">Used by climbers preparing for Denali, Kilimanjaro &amp; more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6-Month System -->
+    <section class="bg-[var(--mm-light-gray)] text-black py-24 px-6" id="system">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <p class="section-heading uppercase text-sm text-[var(--mm-red)] tracking-[0.4em] mb-3">The 6-Month System</p>
+          <h2 class="text-4xl font-semibold mb-4">What You Actually Get</h2>
+          <p class="text-lg text-black/70 mb-6">Precision Preparation is structured, tangible, and premium — covering the physical, mental, and expedition-readiness pillars required to move from:</p>
+          <div class="flex items-center justify-center gap-4 text-lg font-semibold">
+            <span class="text-black/70">"Interested in Denali"</span>
+            <span class="text-[var(--mm-red)]">→</span>
+            <span class="text-black">"100% confident and ready to summit"</span>
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-8">
+          <article class="phase-card">
+            <p class="text-sm uppercase tracking-[0.3em] text-[var(--mm-red)] mb-3">Phase 1 — MONTH 1</p>
+            <h3 class="text-2xl font-semibold mb-2">Baseline &amp; Strategy — Your Official Go / Adjust Plan</h3>
+            <ul class="space-y-2 text-black/70 text-sm mb-4">
+              <li class="flex items-start gap-2">
+                <span class="text-[var(--mm-red)] mt-1">✓</span>
+                <span>Mountain Madness Score (powered by the Recal Breath Index + Fitness Index + Mindset Index)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[var(--mm-red)] mt-1">✓</span>
+                <span>Comprehensive intake + medical review overview</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[var(--mm-red)] mt-1">✓</span>
+                <span>Personalized TrainingPeaks roadmap based on your baseline</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[var(--mm-red)] mt-1">✓</span>
+                <span>Gear audit + logistical plan (travel timeline, equipment checks)</span>
+              </li>
+            </ul>
+            <div class="pt-4 border-t border-black/10">
+              <p class="text-xs uppercase tracking-[0.3em] text-black/60 mb-1">Deliverable</p>
+              <p class="text-sm font-semibold text-black">You leave Month 1 with a green-lit, fully customized path to Denali success</p>
+            </div>
+          </article>
+          <article class="phase-card">
+            <p class="text-sm uppercase tracking-[0.3em] text-[var(--mm-red)] mb-3">Phase 2 — MONTHS 2–4</p>
+            <h3 class="text-2xl font-semibold mb-2">Build &amp; Refine — Your Strength, Endurance &amp; Altitude Systems</h3>
+            <ul class="space-y-2 text-black/70 text-sm mb-4">
+              <li class="flex items-start gap-2">
+                <span class="text-[var(--mm-red)] mt-1">✓</span>
+                <span>Monthly 1:1 with your Alpine Athletics summit coach</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[var(--mm-red)] mt-1">✓</span>
+                <span>Nutrition progression aligned to Denali workloads</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[var(--mm-red)] mt-1">✓</span>
+                <span>Breathwork &amp; recovery protocols for high-altitude performance</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[var(--mm-red)] mt-1">✓</span>
+                <span>CTL targets mapped to West Buttress requirements</span>
+              </li>
+            </ul>
+            <div class="pt-4 border-t border-black/10">
+              <p class="text-xs uppercase tracking-[0.3em] text-black/60 mb-1">Deliverable</p>
+              <p class="text-sm font-semibold text-black">Your physiology adapts — fitness moves from "capable" → performance-ready</p>
+            </div>
+          </article>
+          <article class="phase-card">
+            <p class="text-sm uppercase tracking-[0.3em] text-[var(--mm-red)] mb-3">Phase 3 — MONTHS 5–6</p>
+            <h3 class="text-2xl font-semibold mb-2">The Denali Game Plan — Full Expedition-Specific Prep</h3>
+            <ul class="space-y-2 text-black/70 text-sm mb-4">
+              <li class="flex items-start gap-2">
+                <span class="text-[var(--mm-red)] mt-1">✓</span>
+                <span>Glacier travel, fixed lines, sled hauling &amp; cold management</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[var(--mm-red)] mt-1">✓</span>
+                <span>System rehearsals: layering, tent ops, pack management</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[var(--mm-red)] mt-1">✓</span>
+                <span>Final Readiness Review with Mountain Madness guide team</span>
+              </li>
+            </ul>
+            <p class="text-xs text-black/60 italic mb-4">(No surprise "go/no-go" — you'll know you're ready well before departure)</p>
+            <div class="pt-4 border-t border-black/10">
+              <p class="text-xs uppercase tracking-[0.3em] text-black/60 mb-1">Deliverable</p>
+              <p class="text-sm font-semibold text-black">Confidence, competence, and a clear path to summit day</p>
+            </div>
+          </article>
+        </div>
+        <div class="mt-16">
+          <div class="bg-white rounded-3xl p-10 flex flex-col md:flex-row items-center gap-6 md:gap-10 shadow-2xl">
+            <div class="flex-1">
+              <p class="uppercase text-sm tracking-[0.3em] text-[var(--mm-red)] mb-2">Next Step</p>
+              <h3 class="text-3xl font-semibold mb-3">Want the full breakdown?</h3>
+              <p class="text-black/70 mb-2">Download Your Denali Success Toolkit</p>
+              <p class="text-sm text-black/60">Gear checklist • Training overview • Payment planning • All curated by Lisa's team</p>
+              <p class="text-xs text-black/50 mt-2">Free download. Instant access.</p>
+            </div>
+            <a id="btn-download-toolkit" href="#toolkit" class="btn btn-primary">Download the Toolkit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety & Ethics -->
+    <section class="bg-white py-24 px-6" id="safety">
+      <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="section-heading uppercase text-sm text-[var(--mm-red)] tracking-[0.4em] mb-4">Safety · Ethics · Legacy</p>
+          <h2 class="text-4xl font-semibold mb-6">Safety, Ethics, and Legacy</h2>
+          <p class="text-black/70 mb-8">Transparent group size (10 climbers max, 1:2 guide ratio), honest communication on inclusions, and safety-first decision making. Our guides are empowered to call no-go when it matters, and our expedition medical oversight keeps every climber aligned with the plan.</p>
+          <ul class="space-y-3 text-black/70">
+            <li>Honest inclusions: no hidden logistics, no surprise invoices.</li>
+            <li>Ethical partnerships and fair guide compensation.</li>
+            <li>Environmental stewardship on the Kahiltna.</li>
+          </ul>
+          <div class="mt-10">
+            <a id="btn-safety-brief" href="#safety-brief" class="btn btn-secondary">Download the Denali Safety Briefing</a>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="value-card">
+            <p class="text-xs uppercase tracking-[0.3em] text-black/60 mb-2">Guide Ratio</p>
+            <p class="text-3xl font-bold text-black">1:2</p>
+            <p class="text-black/70 text-sm">Maximum 6 climbers per guide team.</p>
+          </div>
+          <div class="value-card">
+            <p class="text-xs uppercase tracking-[0.3em] text-black/60 mb-2">Group Size</p>
+            <p class="text-3xl font-bold text-black">10</p>
+            <p class="text-black/70 text-sm">Exclusive cohort per 2026 departure.</p>
+          </div>
+          <div class="value-card">
+            <p class="text-xs uppercase tracking-[0.3em] text-black/60 mb-2">Medical</p>
+            <p class="text-xl font-bold text-black">Physician Oversight</p>
+            <p class="text-black/70 text-sm">Baseline labs + on-mountain protocols.</p>
+          </div>
+          <div class="value-card">
+            <p class="text-xs uppercase tracking-[0.3em] text-black/60 mb-2">Ethics</p>
+            <p class="text-xl font-bold text-black">Transparent Inclusions</p>
+            <p class="text-black/70 text-sm">All expedition essentials included up-front.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guide Team -->
+    <section class="bg-white py-16 px-6 border-t border-black/5" id="guide-team">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-semibold mb-3">Meet Your Guide Team for Denali 2026</h2>
+          <p class="text-lg text-black/70">Led by seasoned Denali professionals dedicated to safe + smart success.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="bg-white border border-black/10 rounded-xl p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.3em] text-[var(--mm-red)] mb-2">Lead Guide</p>
+            <h3 class="text-xl font-semibold mb-2">NAME</h3>
+            <p class="text-sm text-black/70 mb-3">8x Denali summits • Wilderness medical &amp; crevasse rescue certified</p>
+            <p class="text-sm text-black/80 italic">"Safety is skill. And we train for skill."</p>
+          </article>
+          <article class="bg-white border border-black/10 rounded-xl p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.3em] text-[var(--mm-red)] mb-2">Guide</p>
+            <h3 class="text-xl font-semibold mb-2">NAME</h3>
+            <p class="text-sm text-black/70">5x Denali summits • Technical rope systems &amp; risk management</p>
+          </article>
+          <article class="bg-white border border-black/10 rounded-xl p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.3em] text-[var(--mm-red)] mb-2">Guide</p>
+            <h3 class="text-xl font-semibold mb-2">NAME</h3>
+            <p class="text-sm text-black/70">High-altitude decision-making &amp; emergency response</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing & Value -->
+    <section class="bg-white py-24 px-6 border-y border-black/5" id="pricing">
+      <div class="max-w-6xl mx-auto space-y-16">
+        <div class="text-center max-w-3xl mx-auto">
+          <p class="section-heading uppercase text-sm text-[var(--mm-red)] tracking-[0.4em] mb-4">Pricing &amp; Value</p>
+          <h2 class="text-4xl font-semibold mb-4">The Investment in Certainty</h2>
+          <p class="text-black/70 text-lg">Every detail from training to summit is integrated. Compare the value to piecing together training, logistics, and expedition support separately.</p>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div class="bg-white border border-black/10 rounded-3xl p-10 flex flex-col gap-6 shadow-xl">
+            <div>
+              <h3 class="text-3xl font-semibold text-black mb-4">$27,800 · 6 Months + 22-Day Expedition</h3>
+              <p class="text-sm uppercase tracking-[0.3em] text-black/60 mb-4">Includes:</p>
+              <ul class="space-y-3 text-black/70 text-sm">
+                <li>Integrated 6-month coaching + readiness protocol</li>
+                <li>22-day Denali expedition — fully coordinated and hosted by Mountain Madness</li>
+                <li>Expert collective: medical, nutrition, breathwork, and summit strategy</li>
+                <li>All critical expedition logistics (group gear, food on-mountain, on-route systems)</li>
+                <li>Lisa Thompson's leadership + single-point accountability from dream to summit</li>
+              </ul>
+            </div>
+            <div class="mt-auto">
+              <a href="#payment" class="btn btn-primary w-full text-center">Request a Payment Breakdown</a>
+              <p class="text-xs text-black/60 text-center mt-2">Payment plans available with no cost-overrun surprises</p>
+            </div>
+          </div>
+          <div class="bg-white border border-black/10 rounded-3xl p-10 space-y-6 shadow-md">
+            <p class="text-sm uppercase tracking-[0.3em] text-black/60 mb-4">Value Equalizer</p>
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-semibold text-black mb-2">What Most Climbers Do</h4>
+                <p class="text-sm text-black/70">Book a Denali climb → hire a coach → guess everything else → pray it works</p>
+              </div>
+              <div>
+                <h4 class="font-semibold text-black mb-2">What Precision Preparation Does</h4>
+                <p class="text-sm text-black/70 mb-3">Starts with the summit, engineers backward, and controls every variable that causes failure:</p>
+                <ul class="space-y-2 text-sm text-black/70">
+                  <li class="flex items-start gap-2">
+                    <span class="text-[var(--mm-red)] mt-1">•</span>
+                    <span>Readiness gaps</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[var(--mm-red)] mt-1">•</span>
+                    <span>Poor nutrition at altitude</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[var(--mm-red)] mt-1">•</span>
+                    <span>Medical blind spots</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[var(--mm-red)] mt-1">•</span>
+                    <span>Equipment mistakes</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-[var(--mm-red)] mt-1">•</span>
+                    <span>Mental collapse in the storm window</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-4 border-t border-black/10">
+                <p class="text-sm font-semibold text-black">The premium is smaller than the cost of failure —</p>
+                <p class="text-sm font-semibold text-black">and infinitely less than giving up on Denali.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="comparison-table text-sm text-black/70">
+            <thead>
+              <tr>
+                <th class="text-left">What You Get</th>
+                <th>Precision Preparation</th>
+                <th>Standard Approach</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mountain Madness Score Diagnostic</td>
+                <td>Included</td>
+                <td>Not available</td>
+              </tr>
+              <tr>
+                <td>Integrated Training + Expedition Coordination</td>
+                <td>One accountable team</td>
+                <td>Multiple failing handoffs</td>
+              </tr>
+              <tr>
+                <td>Medical + Nutrition + Breathwork Oversight</td>
+                <td>Built-in</td>
+                <td>Self-managed</td>
+              </tr>
+              <tr>
+                <td>Transparent Logistics &amp; Costs</td>
+                <td>Fully mapped</td>
+                <td>Hidden &amp; variable</td>
+              </tr>
+              <tr>
+                <td>Guide Ratio on Denali</td>
+                <td>1:2 via vetted partner</td>
+                <td>Often 1:3 or worse</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="text-center mt-12">
+          <a href="#masterclass" class="btn btn-primary"><span>Join the <span class="font-black tracking-[0.08em]">FREE</span> Denali 2026 Masterclass</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-white py-24 px-6" id="testimonials">
+      <div class="max-w-6xl mx-auto space-y-12">
+        <div class="text-center max-w-3xl mx-auto">
+          <p class="section-heading uppercase text-sm text-[var(--mm-red)] tracking-[0.4em] mb-4">Testimonials</p>
+          <h2 class="text-4xl font-semibold mb-4">Success Stories from Denali &amp; Beyond</h2>
+          <p class="text-black/70 text-lg">Hear from climbers who trusted Mountain Madness and Lisa’s leadership on Denali and other high-altitude objectives.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <article class="bg-white border border-black/5 rounded-xl p-8 shadow-lg">
+            <div class="mb-6">
+              <p class="text-sm uppercase tracking-[0.3em] text-[var(--mm-red)]">Denali Expedition</p>
+            </div>
+            <p class="text-lg text-black font-medium mb-4">“Precision logistics, calm leadership, and zero surprises. Denali was the hardest thing I’ve ever done—and I never once doubted the plan.”</p>
+            <p class="text-sm text-black/60">— Eric M., Denali Summit 2024</p>
+          </article>
+          <article class="bg-white border border-black/5 rounded-xl p-8 shadow-lg">
+            <div class="mb-6">
+              <p class="text-sm uppercase tracking-[0.3em] text-[var(--mm-red)]">High-Altitude Expedition</p>
+            </div>
+            <p class="text-lg text-black font-medium mb-4">“Mountain Madness blended cultural immersion with elite guiding. I arrived stronger, more confident, and more capable because of their system.”</p>
+            <p class="text-sm text-black/60">— Sofia R., Aconcagua 2023</p>
+          </article>
+          <article class="bg-white border border-black/5 rounded-xl p-8 shadow-lg">
+            <div class="mb-6">
+              <p class="text-sm uppercase tracking-[0.3em] text-[var(--mm-red)]">Lisa’s Guidance</p>
+            </div>
+            <p class="text-lg text-black font-medium mb-4">“Lisa coached me through every decision. She balances warmth with decisiveness—the exact guide you want when the weather turns.”</p>
+            <p class="text-sm text-black/60">— Daniel K., Himalayan Expedition 2022</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="bg-white py-24 px-6" id="faqs">
+      <div class="max-w-6xl mx-auto space-y-12">
+        <div class="text-center max-w-3xl mx-auto">
+          <p class="section-heading uppercase text-sm text-[var(--mm-red)] tracking-[0.4em] mb-4">FAQs</p>
+          <h2 class="text-4xl font-semibold mb-4">Everything You’re Wondering About Precision Prep</h2>
+          <p class="text-black/70 text-lg">Honest answers to the questions high-performing professionals ask before committing to Denali.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <article class="bg-white border border-black/5 rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold mb-3">What if I’m not fit enough yet?</h3>
+            <p class="text-black/70 text-sm">That’s exactly what the 6-month runway is for. We benchmark your Mountain Madness Score, then map TrainingPeaks targets that meet you where you are. If you’re committed to the work, we’ll build you up deliberately.</p>
+          </article>
+          <article class="bg-white border border-black/5 rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold mb-3">What if I sign up and life gets in the way?</h3>
+            <p class="text-black/70 text-sm">We build contingency into the plan. Your coach recalibrates weekly around travel, illness, or workload. If a major life event happens, we’ll collaborate on deferment options so the investment still serves you.</p>
+          </article>
+          <article class="bg-white border border-black/5 rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold mb-3">Can I join if I haven’t done Rainier or Baker yet?</h3>
+            <p class="text-black/70 text-sm">Yes, if you’re ready to commit to the prep course component. We’ll schedule Denali Prep on Rainier/Baker (or equivalent) to ensure glacier systems, sled management, and fixed lines are second nature before Alaska.</p>
+          </article>
+          <article class="bg-white border border-black/5 rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold mb-3">What’s your refund / cancellation policy?</h3>
+            <p class="text-black/70 text-sm">Precision Prep mirrors Mountain Madness expedition terms: a $3,000 deposit (2,000 non-refundable) secures your spot, balance due 120 days out. We strongly recommend cancellation insurance and we’re transparent about all inclusions.</p>
+          </article>
+          <article class="bg-white border border-black/5 rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold mb-3">How does the training integrate with my existing coach or plan?</h3>
+            <p class="text-black/70 text-sm">We can collaborate with your current coach or take the lead. Alpine Athletics shares CTL targets, lab data, and phase objectives so everyone rows in the same direction. No competing plans—one unified roadmap.</p>
+          </article>
+          <article class="bg-white border border-black/5 rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold mb-3">What happens if I need more time?</h3>
+            <p class="text-black/70 text-sm">We can extend your programming or shift you to a later Denali departure. The structure is flexible enough to maintain momentum without compromising the standard Lisa expects for Mountain Madness Score.</p>
+          </article>
+        </div>
+        <div class="bg-[var(--mm-light-gray)] rounded-3xl p-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+          <div class="flex-1">
+            <p class="uppercase text-xs tracking-[0.3em] text-black/60 mb-2">Still unsure?</p>
+            <h3 class="text-3xl font-semibold mb-3">Talk through it with Lisa.</h3>
+            <p class="text-black/70">Request a short call to walk through your fitness, logistics, or timing concerns. We’ll point you to the best next step—whether that’s Precision Prep or another progression.</p>
+          </div>
+          <a id="btn-talk-to-lisa" href="#contact-lisa" class="btn btn-primary">Talk to Lisa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="bg-white py-24 px-6" id="masterclass">
+      <div class="max-w-5xl mx-auto text-center space-y-8">
+        <p class="section-heading uppercase text-sm text-[var(--mm-red)] tracking-[0.4em]">Final Call</p>
+        <h2 class="text-4xl font-semibold">Ready to take Denali seriously?</h2>
+        <p class="text-black/70 text-lg">One path. One team. One plan that removes the guesswork. Join the 2026 Precision Preparation cohort before the 10 seats are gone.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+          <a href="#masterclass" class="btn btn-primary flex-col gap-1 text-center">
+            <span>Join the FREE 2026 Masterclass</span>
+            <span class="text-xs font-normal tracking-normal text-white/80 normal-case">By Lisa Thompson</span>
+          </a>
+          <a href="#diagnostic" class="btn btn-secondary flex-col gap-1 text-center">
+            <span>Get My Readiness Score</span>
+            <span class="text-xs font-normal tracking-normal text-black/70 normal-case">Mountain Madness Score in 10 minutes</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-white border-t border-black/10">
+      <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <p class="text-sm text-black/60">© 2025 Mountain Madness, Inc. All rights reserved.</p>
+        <div class="flex items-center gap-4 justify-start md:justify-end">
+          <img src="https://via.placeholder.com/120x40?text=AMGA" alt="AMGA Accredited" class="h-10 w-auto object-contain grayscale">
+          <img src="https://via.placeholder.com/120x40?text=USFS" alt="US Forest Service Permittee" class="h-10 w-auto object-contain grayscale">
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>
+
